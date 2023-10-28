@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>lab08</title>
+	</head>
+	<body>
+		<h1>form page</h1><hr>
+		<form method="POST" action="{{ url_for('send') }}">
+		<input type="text" name="txt">
+		<input type="submit" value="send">
+		</form>
+	</body>
+</html>

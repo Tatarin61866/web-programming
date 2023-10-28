@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>lab08</title>
+	</head>
+		<a href="/">goto original page</a>
+		{% block content %}
+		another content
+		{% endblock %}
+	</body>
+</html>

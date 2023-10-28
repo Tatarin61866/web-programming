@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>lab08</title>
+	</head>
+	<h1>another page</h1><hr>
+		<a href="{{ url_for('index')}}">goto original page</a><hr>
+		<a href="{{ url_for('page2')}}">goto another page</a><hr>
+		<a href="{{ url_for('page5')}}">goto extensible page</a><hr>
+		<a href="{{ url_for('send')}}">goto form page</a><hr>
+		{% block content %}
+		another content<br>
+		<img width="50px" height="50px"src={{ url_for('static',filename='sub.png' )}}>
+		{% endblock %}
+	</body>
+</html>

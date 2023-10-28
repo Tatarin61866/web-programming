@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>lab08</title>
+	</head>
+	<h1>original page</h1><hr>
+		<a href="{{ url_for('index')}}">goto original page</a><hr>
+		<a href="{{ url_for('page2')}}">goto another page</a><hr>
+		<a href="{{ url_for('page5')}}">goto extensible page</a><hr>
+		<a href="{{ url_for('send')}}">goto form page</a><hr>
+		{% block content %}
+		original content <br>
+		""
+		{% endblock %}
+		<hr>
+		{% block message %}
+		message:<br>
+			<ul>
+			{% for msg in get_flashed_messages() %}
+				<li>{{ msg }}</li>
+			{% endfor %}
+			</ul>
+		{% endblock %}
+		
+	</body>
+</html>

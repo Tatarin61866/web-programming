@@ -1,0 +1,2 @@
+
+app.config['SECRET_KEY'] = 'mykey'
