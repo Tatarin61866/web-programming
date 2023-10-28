@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+	<head>
+		<meta lanh:"en" carset:"utf-8">
+		<title>g12_haliullin lab02</title>
+	</head>
+	<body>
+	<h1>list</h1>
+	<hr>
+	<ol>
+		<li>first element</li>
+		<li>second element</li>
+		<ol type="a">
+			<li>sublist first element</li>
+			<li>sublist second element</li>
+		</ol>
+		<li>third element</li>
+		</ol>
+	<hr>
+		<ol type="A">
+			<li>Pen</li>
+			<li>Pencil</li>
+			<li>Pencil case</li>
+		</ol>
+		<hr>
+		<ol type="a">
+			<li>Pen</li>
+			<li>Pencil</li>
+			<li>Pencil case</li>
+		</ol>
+		<hr>
+		<ol type="I" start="3">
+			<li>Pen</li>
+			<li>Pencil</li>
+			<li>Pencil case</li>
+		</ol>
+		<hr>
+		<ol type="i">
+			<li>Pen</li>
+			<li>Pencil</li>
+			<li>Pencil case</li>
+		</ol>
+		<hr>
+		<ol start="6">
+			<li>Pen</li>
+			<li>Pencil</li>
+			<li>Pencil case</li>
+		</ol>
+		<hr>
+		<ul type="disc">
+			<li>Pen</li>
+			<li>Pencil</li>
+			<li>Pencil case</li>
+		</ul>
+		<hr>
+		<ul type="circle">
+			<li>Pen</li>
+			<li>Pencil</li>
+			<li>Pencil case</li>
+		</ul>
+		<hr>
+		<ul type="square">
+			<li>Pen</li>
+			<li>Pencil</li>
+			<li>Pencil case</li>
+		</ul>
+		<hr>
+		<ul type="disc">
+			<li>Pen</li>
+			<li>Pencil
+				<ol>
+					<li>Pen</li>
+					<li>Pencil
+						<ol type="I">
+							<li>Pen</li>
+							<li>Pencil
+								<ul type="square">
+									<li>Pen</li>
+									<li>Pencil
+										<ol type="a">
+											<li>Pen</li>
+											<li>Pencil
+												<ul type="circle">
+													<li>Pen</li>
+													<li>Pencil
+														<ol type="i">
+															<li>Pen</li>
+															<li>Pencil
+																<ol type="A">
+																	<li>Pen</li>
+																	<li>Pencil</li>
+																	</ol>
+															</li>
+														</ol>
+													</li>
+												</ul>
+											</li>
+										</ol>
+									</li>
+								</ul>
+							</li>
+						</ol>
+					</li>	
+				</ol>
+			</li>
+		</ul>
+		<hr>
+<a href="index.html">go to index<a/><br><a href="page.html">go to page<a/><br><a href="table.html">go to table<a/>
+	</body>
+</html>

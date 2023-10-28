@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>g12_haliullin_lab02</title>
+		<title>g12_haliullin lab01</title>
+	</head>
+	<body>
+	<a href="index.html">go to index</a><br><a href="list.html">go to list</a><br><a href="table.html">go to table</a>
+	<h3>table of contents</h3>
+	<a href="#section1">goto section 1</a><br>
+	<a href="#section2">goto section 2</a><br>
+	<hr>
+	<a id="section1"></a>
+	<h3>this is section 1</h3>
+	some text<br>
+	<hr>
+	<a id="section2"></a>
+	<h3>this section 2</h3>
+	more text<br>
+	even more text
+	</body>
+</html>

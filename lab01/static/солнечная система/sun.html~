@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>g12_haliullin lab03</title>
+	</head>
+	<body>
+	<h1>Это солнеце!</h1>
+		<hr>
+		<table cols="5" rows="6" border="1">
+		<tr>
+				<td>Масса:</td>
+				<td>1,9885⋅1030 кг</td>
+				<td> м</td>
+				<td> м</td>
+				<td> м</td>
+			</tr>
+		<tr>
+				<th colspan="2">Звезда</th>
+				<!--<td>dwd</td>
+				<td> м</td>
+				<td> м</td>
+				<td> м</td>-->
+			</tr>
+			<tr>
+				<td rowspan="3"><img align="center" width="250px" height="250px"src="star-sun-256px.png"></td>
+				
+			</tr>
+			<tr>
+				<!--<td>Средний диаметр:</td>-->
+				<td>1,392⋅109 м</td>
+				<td> м</td>
+				<td> м</td>
+				<td> м</td>
+			</tr>
+			<tr>
+				<td>Масса:</td>
+				<td>1,9885⋅1030 кг</td>
+				<td> м</td>
+				<td> м</td>
+				<td> м</td>
+			</tr>
+			<tr>
+				<td>Температура ядра:</td>
+				<td>~15 700 000 К</td>
+				<td> м</td>
+				<td> м</td>
+				<td> м</td>
+			</tr>
+		</table>
+	</body>
+</html>
