@@ -1,29 +1,22 @@
 {% extends 'base.html' %}
+{% set active_page = "page2" %}
 
 {% block content %}
 <h1 class="text-center">page 2</h1>
-<table class="table table-light">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Имя</th>
-      <th scope="col">Фамилия</th>
-      <th scope="col">Username</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Rinat</td>
-      <td>Khaliullin</td>
-      <td>@TataRin</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Rodion</td>
-      <td>Fedorenko</td>
-      <td>@GeTiCo</td>
-    </tr>
-  </tbody>
-</table>
+<form method="post" action="/reg" class="w-50 mx-auto">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Почта</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите почту">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Пароль</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Пароль">
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label name='chk' class="form-check-label" for="exampleCheck1">Проверь меня</label>
+  </div>
+  <button type="submit" name="reg" class="btn btn-primary">Авторизация</button>
+</form>
+
 {% endblock %}

@@ -1,4 +1,41 @@
 {% extends 'base.html' %}
+{% set active_page = "page3" %}
 {% block content %}
 <h1>page 3</h1>
+<table class="w-50 mx-auto table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Имя</th>
+        <th scope="col">Фамилия</th>
+        <th scope="col">Username</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Rinat</td>
+        <td>Khaliullin</td>
+        <td>@TataRin</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Rodion</td>
+        <td>Fedorenko</td>
+        <td>@GeTiCo</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Roman</td>
+        <td>Nemilov</td>
+        <td>@Rom</td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>Danil</td>
+        <td>Buzanov</td>
+        <td>@Buz</td>
+      </tr>
+    </tbody>
+  </table>
 {% endblock %}

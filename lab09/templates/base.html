@@ -5,13 +5,15 @@
     <title>lab09</title>
     <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
   </head>
-  <body  >
+  <body class="text-center"  >
    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
   <a class="navbar-brand" href="{{ url_for('index')}}">Lab09</a>
     <div>
-     <a class="btn btn-primary" role="button" aria-pressed="true" href="{{ url_for('page1') }}">page1</a>
-     <a class="btn btn-primary" href="{{ url_for('page2')}}">page2</a>
-     <a class="btn btn-primary" href="{{ url_for('page3')}}">page3</a>
+          <a class="btn btn-primary {{ 'active' if active_page == 'page1' else '' }}"  href="{{ url_for('page1') }}">page1</a>
+        
+          <a class="btn btn-primary {{ 'active' if active_page == 'page2' else '' }}" href="{{ url_for('page2')}}">page2</a>
+       
+          <a class="btn btn-primary {{ 'active' if active_page == 'page3' else '' }}" href="{{ url_for('page3')}}">page3</a>
     </div>
   </div>
 </nav>

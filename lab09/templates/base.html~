@@ -5,7 +5,7 @@
     <title>lab09</title>
     <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css">
   </head>
-  <body  >
+  <body class="text-center w-50"  >
    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
   <a class="navbar-brand" href="{{ url_for('index')}}">Lab09</a>
     <div>
