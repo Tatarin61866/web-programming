@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>lab10</title>
+		<link href=../static/bootstrap/css/bootstrap.min.css rel="stylesheet">
+	</head>
+	<body>
+		<h1 class="display-3 text-primary ">Lab10</h1>
+		<hr>
+		<from method="post" action="add">
+			<textarea name="content"></textarea>
+			<input type="submit">
+		</form>
+		<table>
+			<tr>
+				{% for item in items %}
+				<td>{{ item[1] }} {{ item[2] }}</td>
+				{% endfor %}	
+			</tr>
+		</table>
+	</body>
+</html>

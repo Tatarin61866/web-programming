@@ -1,15 +1,33 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, redirect, url_for
 from static import bootstrap
+import psycopg2
 
 app = Flask('lab10')
 
-@app.route('/')
-def index():
-	return render_template('index.html')
+con = psycopg2.connect('host=pg.spb-kit.online port=54321 user=student password=stud_pass dbname=g12_haliullin')
+
+@app.route('/list')
+def list_notes():
+	cur = con.cursor()
+	cur.execute("SELECT id, txt, to_char(ts, 'DD Mon YYYY HH24:MI') FROM lab10.notes;")
+	arr = cur.fetchall()
+	cur.close()
+	return render_template('list.html', items=arr) 
+	
+@app.route('/add', methods=['POST'])
+def add_note():
+	t = request.form.get("content")
+	cur = con.cursor()
+	cur = execute("INSERT INTO lab10.notes (txt) VALUES (%s)", [t])
+	cur.close()
+	cur.commit()
+	return redirect(url_for('list_notes'))
 
 	
-if __name__ == "__main__":
-	app.run(host='0.0.0.0', port=5000, debug=True)
+
+	
+#if __name__ == "__main__":
+#	app.run(host='0.0.0.0', port=5000, debug=True)
 	##http://pg.spb-kit.online:50505/ там бд хранить (РОДЯ, ТАМ ВСЕГО 3 ПОЫТКИ МАТЬ ЕГО, так что не ошибайся, а то все ляжет)
 	## логин student@test.lab
 	## пароль stud_pass
@@ -28,3 +46,6 @@ if __name__ == "__main__":
 	## ts TIMESTAMP WITHOUT TIMEZONE nn default(now())
 	## создать запись INSERT INTO lab10.notes (txt) values ('dwd');
 	## pk-notes-id sq-notes-id
+	# Добваить цвет к заметкам
+	# добавить название к заметкам жирным
+	# все в квадратиках
