@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>lab10</title>
+		<link href=../static/bootstrap/css/bootstrap.min.css rel="stylesheet">
+	</head>
+	<body>
+		<h1 class="display-3 text-primary ">Lab10</h1>
+		<hr>
+		<form method="POST" action="add">
+			<h3>Title</h3><p>
+			<textarea name="title"></textarea><p>
+			<h3>Content</h3>
+			<textarea name="content"></textarea>
+			<input type="submit" >
+		</form>
+{% for item in items %}
+		<table class="table-bordered" width="200px" height="150px"> 
+			<tr class="text-center font-weight-bold" height="30px">
+				<td>{{ item[1] }} </td>
+				<p>	
+			</tr>
+			<tr  > 
+				<td class="align-top p-1"> {{ item[2] }}</td>
+			</tr></tr>
+			<tr> 
+				<td class=""> {{ item[4] }}</td>
+			</tr>
+		</table>
+{% endfor %}
+	</body>
+</html>
