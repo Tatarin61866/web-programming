@@ -9,7 +9,7 @@ con = psycopg2.connect('host=pg.spb-kit.online port=54321 user=g12_haliullin pas
 @app.route('/list')
 def list_notes():
 	cur = con.cursor()
-	cur.execute("SELECT id, title, txt, to_char(ts, 'DD Mon YYYY HH24:MI') FROM lab10.notes;")
+	cur.execute("SELECT id, title, txt, color, to_char(ts, 'DD Mon YYYY HH24:MI') FROM lab10.notes;")
 	arr = cur.fetchall()
 	cur.close()
 	return render_template('list.html', items=arr) 
@@ -18,8 +18,9 @@ def list_notes():
 def add_note():
 	ti = request.form.get("title")
 	t = request.form.get("content")
+	c = request.form.get('color')
 	cur = con.cursor()
-	cur.execute("INSERT INTO lab10.notes (title, txt) VALUES (%s, %s);",[ti,t])
+	cur.execute("INSERT INTO lab10.notes (title, txt, color) VALUES (%s, %s, %s);",[ti,t,c])
 	cur.close()
 	con.commit()
 	return redirect(url_for('list_notes'))

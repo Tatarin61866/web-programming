@@ -8,15 +8,18 @@
 	<body>
 		<h1 class="display-3 text-primary ">Lab10</h1>
 		<hr>
-		<form method="POST" action="add">
-			<h3>Title</h3><p>
-			<textarea name="title"></textarea><p>
-			<h3>Content</h3>
-			<textarea name="content"></textarea>
-			<input type="submit" >
-		</form>
+		<form class="form-row ml-2" method="POST" action="add">
+			<h3 >Title</h3>
+			<textarea class="ml-2 " name="title"></textarea>
+			<h3 class="ml-2 ">Content</h3>
+			<textarea class="ml-2 "name="content"></textarea>
+			<h3 class="ml-2 ">Color</h3>
+			<textarea class="ml-2 " name="color"></textarea>
+			<input class="ml-2 " type="submit" >
+		</form><hr>
+<div class="ml-2 mr-2 ">
 {% for item in items %}
-		<table class="table-bordered" width="200px" height="150px"> 
+		<table class="table-bordered"   width="200px" height="150px"> 
 			<tr class="text-center font-weight-bold" height="30px">
 				<td>{{ item[1] }} </td>
 				<p>	
@@ -24,10 +27,11 @@
 			<tr  > 
 				<td class="align-top p-1"> {{ item[2] }}</td>
 			</tr></tr>
-			<tr> 
-				<td class=""> {{ item[4] }}</td>
+			<tr bgcolor="{{item[3]}}" >
+				<td  class="" height="30px" > {{ item[4] }}</td>
 			</tr>
 		</table>
 {% endfor %}
+</div>
 	</body>
 </html>
